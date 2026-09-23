@@ -109,7 +109,7 @@ h1{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;
   </header>
   <div class="shelf" id="shelf"></div>
 </div>
-
+ 
 <div class="reader" id="reader">
   <div class="rbar">
     <button class="back" id="back">&#8592; Shelf</button>
@@ -151,7 +151,7 @@ const BOOKS = [{"title": "The Shed Key", "blurb": "Nobody has opened the shed at
 const KEY = "g3-holiday";
 let state={}, cur=-1, pg=0, fs=19, mode="listen";
 const VOICE = ("speechSynthesis" in window);
-
+ 
 async function load(){
   try{const r=await window.storage.get(KEY);state=r?JSON.parse(r.value):{};return;}catch(e){}
   try{const v=window.localStorage.getItem(KEY);state=v?JSON.parse(v):{};}catch(e){state={};}
